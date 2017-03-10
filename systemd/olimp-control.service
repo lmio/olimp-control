@@ -1,0 +1,10 @@
+[Unit]
+Description=olimp-control client
+Wants=network.target
+
+[Service]
+ExecStart=/usr/local/bin/olimp-control.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
