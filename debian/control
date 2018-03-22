@@ -1,0 +1,16 @@
+Source: olimp-control
+Section: misc
+Priority: optional
+Maintainer: LMIO TC <lio-tech@googlegroups.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.8
+Homepage: https://github.com/lmio/olimp-control/
+#Vcs-Git: https://github.com/lmio/olimp-control.git
+#Vcs-Browser: https://github.com/lmio/olimp-control/
+
+Package: olimp-control
+Architecture: all
+Depends: python3, python3-requests, systemd
+Description: Remote machine access via HTTPS (pull model)
+ To run olimp-control, save the shared key as /etc/olimp-control/key,
+ making sure it is mode 400 and owned by root:root.

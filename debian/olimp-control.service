@@ -3,7 +3,7 @@ Description=olimp-control client
 Wants=network.target
 
 [Service]
-ExecStart=/usr/local/bin/olimp-control.py
+ExecStart=/usr/bin/olimp-control.py
 Restart=always
 
 [Install]
