@@ -1,5 +1,11 @@
+olimp-control (1.1-1) unstable; urgency=low
+
+  * Update systemd unit file
+
+ -- LMIO TC <lio-tech@googlegroups.com>  Sat, 09 Mar 2018 21:35:00 +0000
+
 olimp-control (1.0-1) unstable; urgency=low
 
-  * Initial release (Closes: #nnnn)
+  * Initial release
 
  -- LMIO TC <lio-tech@googlegroups.com>  Thu, 22 Mar 2018 08:24:12 +0200
