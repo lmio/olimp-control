@@ -1,3 +1,10 @@
+olimp-control (1.3-1) unstable; urgency=low
+
+  * Split timeouts into connection and read
+  * Adjust the parameters
+
+ -- LMIO TC <lio-tech@googlegroups.com>  Fri, 03 May 2024 14:23:00 +0000
+
 olimp-control (1.2-1) unstable; urgency=low
 
   * Use session object with retry and shorter timeout

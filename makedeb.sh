@@ -6,7 +6,7 @@
 #   https://www.debian.org/doc/manuals/maint-guide/
 #   https://wiki.debian.org/Packaging
 
-ver='1.2'
+ver='1.3'
 projdir="olimp-control-${ver}"
 projtar="olimp-control_${ver}.orig.tar.gz"
 builddir="build"
