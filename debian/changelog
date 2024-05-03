@@ -1,3 +1,9 @@
+olimp-control (1.2-1) unstable; urgency=low
+
+  * Use session object with retry and shorter timeout
+
+ -- LMIO TC <lio-tech@googlegroups.com>  Fri, 03 May 2024 12:43:00 +0000
+
 olimp-control (1.1-1) unstable; urgency=low
 
   * Update systemd unit file
