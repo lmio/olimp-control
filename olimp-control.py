@@ -11,6 +11,9 @@ import subprocess
 import threading
 import time
 
+import machine_id
+
+
 class LmioCtrlApi:
     _AUTH_HEADER = 'X-lmio-auth'
     _FAILED_AUTH = 'Response failed authentication validation'
@@ -142,10 +145,6 @@ def execute_ticket(ticket):
 def get_key(key_file):
     return open(key_file).read().strip()
 
-def get_machine_id():
-    all_macs = subprocess.check_output("cat /sys/class/net/*/address | sort", shell=True)
-    return hashlib.sha1(all_macs).hexdigest()
-
 def main_loop(url, key, mid, poll_frequency, connect_timeout, read_timeout, exit_event):
     api = LmioCtrlApi(url, key, mid, connect_timeout, read_timeout)
     while True:
@@ -186,5 +185,5 @@ if __name__ == '__main__':
     signal.signal(signal.SIGINT, sigterm_handler)
     signal.signal(signal.SIGTERM, sigterm_handler)
 
-    main_loop(args.url, get_key(args.key_file), get_machine_id(), args.poll_frequency, args.connect_timeout,
+    main_loop(args.url, get_key(args.key_file), machine_id.get_machine_id(), args.poll_frequency, args.connect_timeout,
               args.read_timeout, shutdown_event)
