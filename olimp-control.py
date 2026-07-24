@@ -148,12 +148,12 @@ def get_key(key_file):
 def main_loop(url, key, mid, poll_frequency, connect_timeout, read_timeout, exit_event):
     api = LmioCtrlApi(url, key, mid, connect_timeout, read_timeout)
     while True:
-        session = api.get_session()
-        api.do_ping(session)
-        ticket = api.do_get_ticket(session)
-        if ticket:
-            ticket_results = execute_ticket(ticket)
-            api.do_post_ticket_results(session, ticket_results)
+        with api.get_session() as session:
+            api.do_ping(session)
+            ticket = api.do_get_ticket(session)
+            if ticket:
+                ticket_results = execute_ticket(ticket)
+                api.do_post_ticket_results(session, ticket_results)
 
         wait_result = exit_event.wait(poll_frequency)
         if wait_result:
