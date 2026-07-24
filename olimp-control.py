@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import argparse
-import hashlib
 import hmac
 import json
 import requests
