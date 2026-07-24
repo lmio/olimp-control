@@ -167,7 +167,7 @@ if __name__ == '__main__':
     parser.add_argument('-k', '--key-file', default='/etc/olimp-control/key', help='path to key file')
     parser.add_argument('--connect-timeout', default=5.0, type=float, help='timeout for connections, in seconds')
     parser.add_argument('--read-timeout', default=20.0, type=float, help='timeout for read, in seconds')
-    parser.add_argument('url', nargs='?', default='https://ctrl.lmio.lt/olimp/api',
+    parser.add_argument('url', nargs='?', default='https://ctrl.lmio.lt/api',
         help='url of control api base')
 
     args = parser.parse_args()
